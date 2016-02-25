@@ -1,9 +1,9 @@
 # WiFiCarClient
 本人2014年本科毕业设计，基于OpenWrt的视频监控WiFi遥控车的Android客户端源码
 
-主要功能：
-1. 通过socket连接小车上的ser2net进而向串口发送信息控制小车运动方向的云台的代码
-2. 从小车上获取mjpeg视频流并截图，录像。
+主要功能：</br>
+1. 通过socket连接小车上的ser2net进而向串口发送信息控制小车运动方向的云台</br>
+2. 从小车上获取mjpeg视频流并截图，录像
 
 WiFiCarClient各线程通信同步图
 ![image](https://github.com/feifei435/WiFiCarClient/raw/master/diagrams/WiFiCarClient%E5%90%84%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1%E5%90%8C%E6%AD%A5%E5%9B%BE.png)
