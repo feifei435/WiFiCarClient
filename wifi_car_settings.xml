@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:title="小车设置" 
+    android:key="pref_screen">
+    <PreferenceCategory android:title="服务器设置" android:key="pref_key_comm_settings">
+        <EditTextPreference 
+            android:dialogTitle="控制IP：端口" 
+            android:defaultValue="192.168.128.134:2001" 
+            android:title="控制IP:端口" 
+            android:key="pref_key_router_url"/>
+        <EditTextPreference 
+            android:defaultValue="http://192.168.128.134:8080/?action=stream" 
+            android:title="视频地址"
+            android:key="pref_key_camera_url"/>
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="调试" 
+        android:key="pref_key_test_settings">
+        <CheckBoxPreference android:title="是否开启调试模式" 
+            android:key="pref_key_test_enabled"/>
+        <EditTextPreference android:title="控制IP:端口(调试模式)" 
+            android:defaultValue="192.168.128.134:2001"
+            android:key="pref_key_router_url_test"/>
+        <EditTextPreference android:title="视频地址(调试模式)"
+            android:defaultValue="http://192.168.128.134:8080/?action=stream" 
+            android:key="pref_key_camera_url_test"/>
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="大灯设置" 
+        android:key="pref_key_len_settings">
+        <EditTextPreference 
+            android:dialogTitle="大灯开启指令" 
+            android:defaultValue="FF040100FF" 
+            android:title="开启大灯指令" 
+            android:key="pref_key_len_on"/>
+        <EditTextPreference 
+            android:defaultValue="FF040000FF" 
+            android:title="关闭大灯指令" 
+            android:key="pref_key_len_off"/>
+    </PreferenceCategory>
+</PreferenceScreen>

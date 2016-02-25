@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fei435" android:versionCode="1" android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" ></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" ></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" ></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" ></uses-permission>
+    <!-- 设置手机震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" ></uses-permission>
+
+    <uses-sdk android:minSdkVersion="3"/>
+    
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.fei435.Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>         
+        </activity>
+        <activity
+            android:name="com.fei435.WifiCarSettings"
+            android:label="@string/title_activity_wifi_car_settings" 
+            android:screenOrientation="landscape" >
+        </activity>
+        
+        <activity
+            android:name="com.fei435.Main"
+            android:label="@string/app_name" 
+            android:screenOrientation="landscape" >
+        </activity>
+        
+        <receiver android:name="com.fei435.HanryReceiver" android:exported="false" > 
+		    <intent-filter> 
+		        <action android:name="fei435.take_picture_done" /> 
+		        <action android:name="fei435.recording_start" />
+		        <action android:name="fei435.recording_stop" />
+		    </intent-filter> 
+		</receiver> 
+    </application>
+
+</manifest>

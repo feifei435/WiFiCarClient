@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="hello">fei435</string>
+    <string name="app_name">WiFiCarClient</string>
+    <string name="app_version">Version 1.0</string>
+    <string name="title_activity_wifi_car_settings">小车设置</string>
+</resources>

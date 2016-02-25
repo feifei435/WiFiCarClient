@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.fei435.MjpegView
+        android:id="@+id/mySurfaceView1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+    <ImageButton
+        android:id="@+id/btnLeft"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="left"
+        android:layout_marginBottom="43dp"
+        android:background="#00000000"
+        android:src="@drawable/sym_left" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/btnLeft"
+        android:background="#00000000"
+        android:src="@drawable/sym_backward" />
+
+    <ImageButton
+        android:id="@+id/btnStop"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_above="@id/btnBack"
+        android:layout_alignLeft="@id/btnBack"
+        android:background="#00000000"
+        android:src="@drawable/sym_stop" />
+
+    <ImageButton
+        android:id="@+id/btnRight"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/btnLeft"
+        android:layout_toRightOf="@id/btnStop"
+        android:background="#00000000"
+        android:src="@drawable/sym_right" />
+
+    <ImageButton
+        android:id="@+id/btnForward"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_above="@id/btnStop"
+        android:layout_alignLeft="@id/btnBack"
+        android:layout_marginBottom="4dp"
+        android:background="#00000000"
+        android:src="@drawable/sym_forward" />
+
+    <ImageButton
+        android:id="@+id/ButtonCus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#00000000"
+        android:src="@drawable/sym_setting" />
+
+    <ImageButton
+        android:id="@+id/btnLen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ButtonCus1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#00000000"
+        android:src="@drawable/sym_light_off" />
+
+    <TextView
+        android:id="@+id/logTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnIndicator"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="false"
+        android:layout_marginBottom="4dp"
+        android:layout_toLeftOf="@+id/btnLen"
+        android:layout_toRightOf="@+id/btnIndicator"
+        android:text="Info:"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/btnIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ButtonTakePic"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/ButtonTakePic"
+        android:background="#00000000"
+        android:scaleType="center"
+        android:src="@drawable/sym_indicator" />
+
+    <ImageButton
+        android:id="@+id/ButtonTakePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gear1"
+        android:layout_alignBottom="@id/ButtonCus1"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnForward"
+        android:background="#00000000"
+        android:src="@drawable/take_pic" />
+
+    <com.fei435.SeekBar
+        android:id="@+id/gear1"
+        android:layout_width="30dp"
+        android:layout_height="250dp"
+        android:layout_above="@+id/btnBack"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnLen"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp" />
+
+    <com.fei435.SeekBar
+        android:id="@+id/gear2"
+        android:layout_width="30dp"
+        android:layout_height="250dp"
+        android:layout_above="@+id/btnBack"
+        android:layout_below="@+id/btnLen"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/gear1" />
+
+    <ToggleButton
+        android:id="@+id/gravityToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/gear1"
+        android:layout_alignBottom="@id/ButtonCus1"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/ButtonCus1"
+        android:alpha="0.7"
+        android:checked="false"
+        android:textOff="感应关"
+        android:textOn="感应开"
+        android:textSize="10sp" />
+
+    <CheckBox
+        android:id="@+id/speedChangeCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ButtonCus1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="速度调整" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/gravityToggleButton"
+        android:layout_below="@id/ButtonCus1"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/editTextSpeed1"
+                android:layout_width="64dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="4dp"
+                android:ems="10"
+                android:hint="基准速度"
+                android:digits="1234567890"
+                android:textSize="10sp"
+                android:visibility="invisible" />
+
+            <SeekBar
+                android:id="@+id/seekBarSpeed1"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="7dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            
+            <EditText
+                android:id="@+id/editTextSpeed2"
+                android:layout_width="64dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="4dp"
+                android:ems="10"
+                android:hint="右侧附加"
+                android:digits="1234567890"
+                android:textSize="10sp"
+                android:visibility="invisible" />
+
+            <SeekBar
+                android:id="@+id/seekBarSpeed2"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="7dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
