@@ -3,7 +3,7 @@
 
 主要功能：</br>
 1. 通过socket连接小车上的ser2net进而向串口发送信息控制小车和摄像头云台的运动方向</br>
-2. 从小车上获取mjpeg视频流并截图，录像
+2. 从小车上获取实时mjpeg视频流，并可以对视频截图，录像
 
 WiFiCarClient各线程通信同步图
 ![image](https://github.com/feifei435/WiFiCarClient/raw/master/diagrams/WiFiCarClient%E5%90%84%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1%E5%90%8C%E6%AD%A5%E5%9B%BE.png)
